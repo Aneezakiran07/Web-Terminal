@@ -186,6 +186,13 @@ body {
   z-index: 30;
 }
 
+#user-input::placeholder {
+  color: var(--green-dim);
+  opacity: 1;
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
 #user-input::selection {
   background: var(--green);
   color: #000;

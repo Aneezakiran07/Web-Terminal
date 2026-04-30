@@ -112,7 +112,7 @@ function handleCommands(input) {
     addLine('       type "help" for available commands', 'dim');
     return;
   }
-
+  //see what u wanna Do!
   switch (cmd) {
     case 'help':    cmdHelp();       break;
     case 'clear':   cmdClear();      break;
@@ -263,6 +263,7 @@ function generateDumpLine() {
   return s;
 }
 
+// used ai to write this function 
 function bootSequence() {
   const bootLines = [
     { text: 'BIOS v4.7.2 -- INITIALIZING MEMORY SUBSYSTEM', cls: 'boot', delay: 0 },
