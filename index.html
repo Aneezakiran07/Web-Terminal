@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYS::CORRUPTION v1.0</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="crt-wrap">
+
+    <div class="vignette"></div>
+    <div class="scanlines"></div>
+
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="sys-id">SYS::CORRUPTION</span>
+        <span>USER: OPERATOR_00 &nbsp;|&nbsp; SESSION: ACTIVE</span>
+        <span id="clock">--:--:--</span>
+      </div>
+
+      <div class="output-area" id="output-area"></div>
+
+      <div class="input-row">
+        <span class="prompt-symbol">&#9656;</span>
+        <input
+          type="text"
+          id="user-input"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          autofocus
+          disabled
+        />
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = h + ':' + m + ':' + s;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+
+</body>
+</html>
